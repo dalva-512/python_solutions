@@ -19,7 +19,8 @@ Output: true
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         dct = dict()
-        for i in nums:
+        cnt = 0
+        for i in range(len(nums)):
             cnt = nums.count(nums[i])
             dct[i] = cnt
     
