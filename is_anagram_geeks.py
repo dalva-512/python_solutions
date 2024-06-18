@@ -16,6 +16,8 @@ Output: “Not Anagram”
 class Solution:
     # Function is to check whether two strings are anagram of each other or not.
     def isAnagram(self, a, b):
+        a = a.lower()
+        b = b.lower()
         if sorted(a) == sorted(b):
             return True
         else:
