@@ -23,6 +23,6 @@ class Solution:
         num = sorted(nums)
         val = []
         for i in range(len(num)):
-            n = abs(num[i])
+            n = abs(num[i])             # Returns the absolute value of a number. Here it removes negative integers
             val.append(n ** 2)
         return sorted(val)
