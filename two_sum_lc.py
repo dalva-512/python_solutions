@@ -30,3 +30,30 @@ class Solution:
                     l1.append(i)
                     l1.append(j)
         return l1
+
+#Solution 2:
+def two_sum(nums, target):
+    for i in range(len(nums) - 1):
+        for j in range(1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return i, j
+
+op = two_sum(nums, target)
+print(op)
+
+#Solution 3:
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        print(nums, target)
+        val = []
+        for i in nums:
+            print(i)
+            num = nums[1:]
+            for j in num:
+                if (i + j) == target:
+                    in_i = nums.index(i)
+                    in_j = nums.index(j)
+                    val.append(in_i)
+                    val.append(in_j)
+                    print(val)
+                    return val
