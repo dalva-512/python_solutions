@@ -15,6 +15,9 @@ Output: true
 Explanation: The numbers in s are: 1, 3, 4, 6, 12.
 They are strictly increasing from left to right: 1 < 3 < 4 < 6 < 12.
 
+Example 2:
+s ="hello world 5 x 5"
+Output: False because 5=5 and not in ascending order
 Link: https://leetcode.com/problems/check-if-numbers-are-ascending-in-a-sentence/description/
 """
 
@@ -31,7 +34,7 @@ class Solution:
         for j in range(len(dig) -1):
             k = j + 1
             print(dig[j], dig[k])
-            if int(dig[j]) > int(dig[k]):
+            if int(dig[j]) >= int(dig[k]):
                 return False
             else:
                 continue
