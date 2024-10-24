@@ -1,0 +1,41 @@
+"""
+Array Duplicates:
+=================
+Given an array arr of integers, find all the elements that occur more than once in the array. Return the result in ascending order. If no element repeats, return an empty list.
+
+Examples:
+Input: arr[] = [2, 3, 1, 2, 3]
+Output: [2, 3] 
+Explanation: 2 and 3 occur more than once in the given array.
+
+Input: arr[] = [0, 3, 1, 2] 
+Output: [] 
+Explanation: There is no repeating element in the array, so the output is empty.
+
+Input: arr[] = [2]
+Output: [] 
+Explanation: There is single element in the array. Therefore output is empty.
+
+Constraints:
+1 <= arr.size() <= 106
+0 <= arr[i] <= 106
+
+Link: https://www.geeksforgeeks.org/problems/find-duplicates-in-an-array/1?page=1&company=Amazon&sortBy=submissions 
+"""
+class Solution:
+    def array_dup(self, arr):
+        dup_ar = dict()
+        cnt = 0
+        ret = []
+        for i in arr:
+            cnt = arr.count(i)
+            dup_ar[i] = cnt
+        for key, val in dup_ar.items():
+            if val > 1:
+                ret.append(key)
+        return ret
+
+arr = [0, 3, 1, 2] 
+sol = Solution()
+ret_ar = sol.array_dup(arr)
+print(ret_ar)
