@@ -32,3 +32,26 @@ if val is not None:
     print(f"The frequency of {val[0]} is {val[1]} which is greater than the half of the size of the array size.")
 else:
     print("There is no element whose frequency is greater than the half of the size of the array size.")
+
+#OR
+class Solution:
+    def majority(self, arr):
+        ln = int(len(arr)/2)
+        if len(arr) == 1:
+            return arr
+        maj = 0
+        for i in arr:
+            if i > maj and arr.count(i) >= ln:
+                maj = i
+            else:
+                continue
+        if maj:
+            return maj
+        else:
+            return -1
+        
+
+arr = [2, 13]
+sol = Solution()
+ret_ar = sol.majority(arr)
+print(ret_ar)
