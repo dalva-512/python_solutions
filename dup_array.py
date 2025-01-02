@@ -39,3 +39,41 @@ arr = [0, 3, 1, 2]
 sol = Solution()
 ret_ar = sol.array_dup(arr)
 print(ret_ar)
+
+# Using Counter:
+from collections import Counter
+class Solution:
+    
+    def findDuplicates(self, arr):
+        res = []
+        cnt = Counter(arr)
+        for k, v in cnt.items():
+            if v > 1:
+                res.append(k)
+        return res if res else []
+
+# Other method:
+# Solution class
+class Solution:
+
+    def findDuplicates(self, arr):
+        # Dictionary to store the frequency of elements
+        freq = {}
+
+        # Count the frequency of each element in the array
+        for num in arr:
+            if num in freq:
+                freq[num] += 1
+            else:
+                freq[num] = 1
+
+        # List to store the result (duplicates)
+        result = []
+
+        # Check for elements that occur more than once
+        for key, value in freq.items():
+            if value > 1:
+                result.append(key)
+
+        # If no duplicates are found, return an empty list
+        return result if result else []
