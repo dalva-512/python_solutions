@@ -52,8 +52,7 @@ class Solution:
                 res.append(k)
         return res if res else []
 
-# Other method:
-# Solution class
+# Other method: O(n) complexity
 class Solution:
 
     def findDuplicates(self, arr):
