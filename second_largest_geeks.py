@@ -1,20 +1,24 @@
 """
-Given an array arr of integers, find all the elements that occur more than once in the array. If no element repeats, return an empty array.
+Second Largest
+Difficulty: EasyAccuracy: 26.72%Submissions: 921K+Points: 2
+Given an array of positive integers arr[], return the second largest element from the array. If the second largest element doesn't exist then return -1.
+
+Note: The second largest element should not be equal to the largest element.
 
 Examples:
 
-Input: arr[] = [2, 3, 1, 2, 3]
-Output: [2, 3] 
-Explanation: 2 and 3 occur more than once in the given array.
-Input: arr[] = [0, 3, 1, 2] 
-Output: [] 
-Explanation: There is no repeating element in the array, so the output is empty.
-Input: arr[] = [2]
-Output: [] 
-Explanation: There is single element in the array. Therefore output is empty.
+Input: arr[] = [12, 35, 1, 10, 34, 1]
+Output: 34
+Explanation: The largest element of the array is 35 and the second largest element is 34.
+Input: arr[] = [10, 5, 10]
+Output: 5
+Explanation: The largest element of the array is 10 and the second largest element is 5.
+Input: arr[] = [10, 10, 10]
+Output: -1
+Explanation: The largest element of the array is 10 and the second largest element does not exist.
 Constraints:
-1 <= arr.size() <= 106
-0 <= arr[i] <= 106
+2 ≤ arr.size() ≤ 105
+1 ≤ arr[i] ≤ 105
 
 Link: https://www.geeksforgeeks.org/problems/second-largest3735/
 """
