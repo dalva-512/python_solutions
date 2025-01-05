@@ -57,3 +57,22 @@ class Solution:
                     val.append(in_j)
                     print(val)
                     return val
+
+#Solution 4: O(n)
+def two_sum(nums, target):
+    # Dictionary to store the indices of the numbers we have seen
+    num_to_index = {}
+    
+    # Iterate through the array
+    for index, num in enumerate(nums):
+        # Calculate the complement
+        complement = target - num
+        
+        # Check if the complement exists in the dictionary
+        if complement in num_to_index:
+            # Return the indices of the two numbers
+            return [num_to_index[complement], index]
+        
+        # Otherwise, add the current number and its index to the dictionary
+        num_to_index[num] = index
+
