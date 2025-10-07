@@ -33,3 +33,12 @@ class Solution:
             return True
         else:
             return False
+Sol2:
+======
+def palindrome(s):
+    s1 = ''.join(s.split())
+    print(s1)
+    if s1 == s1[::-1]:
+        return True
+    else:
+        return False
