@@ -33,8 +33,7 @@ class Solution:
             return True
         else:
             return False
-Sol2:
-======
+# Sol2:
 def palindrome(s):
     s1 = ''.join(s.split())
     print(s1)
