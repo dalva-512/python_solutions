@@ -41,3 +41,17 @@ def palindrome(s):
         return True
     else:
         return False
+
+#Sol3:
+class Solution:
+    import re
+    def isPalindrome(self, s: str) -> bool:
+        if len(s) == 1:
+            return True
+        else:
+            s1 = re.sub(r"[^a-zA-Z0-9]", "", s).lower()
+            if s1 == s1[::-1]:
+                return True
+            else:
+                return False
+        
