@@ -47,6 +47,6 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] != val:
                 # If the element is not val
-                nums[count] = nums[i]
+                nums[count] = nums[i]    # In-place replacement, Keep the number only if it is different from val. Otherwise, skip it.
                 count += 1
         return count
